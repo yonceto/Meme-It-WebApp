@@ -1,0 +1,47 @@
+<div id="wrapper">
+    <div ngbDropdown>
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Pick MemeIt domain</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li *ngFor="let domain of domains" ngbDropdownItem (click)="pickDomain(domain) [selected]=currentDomain == domain">{{domain.name}}</li>
+        </ul>
+    </div>
+    <div class="row" class="d-inline-block">
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>
+                    Memes per page: {{count}}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                    <button class="dropdown-item2" (click)="selectPageSize(6)">6</button>
+                    <button class="dropdown-item2" (click)="selectPageSize(12)">12</button>
+                    <button class="dropdown-item2" (click)="selectPageSize(18)">18</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="search">
+    <form (keydown)="search(searchBox.value, $event)">
+        <input class="form-control" type="text" #searchBox id="search-box" placeholder="Search memes">
+        <button type="submit" (click)="search(searchBox.value)">Search</button>
+
+        <!--<span id="clear" *ngIf="searchBox.value" (click)="clear()" (click)='searchBox.value=""'>x</span>-->
+    </form>
+    <p *ngIf="closestSearchTerm">Did you mean: <a (click)="search(closestSearchTerm)" >{{closestSearchTerm}}</a></p>
+</div>
+<div class="grid grid-pad">
+    <table>
+        <tr class="col-1-3" *ngFor="let meme of filteredMemes | paginate: { itemsPerPage: count, currentPage: p }">
+            <td>
+                <div id="imageContainer">
+                    <img src="{{meme.image}}">
+                </div>
+                <p id="description">{{meme.title}}</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="text-right" *ngIf="filteredMemes">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

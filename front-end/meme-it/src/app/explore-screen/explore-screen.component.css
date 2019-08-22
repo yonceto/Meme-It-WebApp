@@ -1,0 +1,127 @@
+button {
+    width: 600px;
+    font-family: Century Gothic;
+    font-size: 16px;
+    border: 0px;
+
+}
+
+#dropdownBasic1 {
+    margin-left: 50px;
+    width: 800px;
+    background-color: white;
+    border: 1px solid #028bc0;
+}
+
+li {
+    width: 800px;
+}
+
+#dropdownBasic2 {
+    width: 250px;
+    margin-left: 50px;
+}
+
+button.dropdown-item2 {
+        padding: 10px 15px;
+        font-family: Century Gothic;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 0px;
+        margin: 20px;
+        width: 50px;
+}
+
+
+#wrapper {
+    display: flex;
+    margin: 30px;
+}
+
+#search {
+    width: 80%;
+}
+
+#search form {
+    display: flex;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+#search form button {
+    margin-left: 30px;
+    width: 150px;
+    padding: 10px 15px;
+    font-family: Century Gothic;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px;
+    color: #ffffff;
+    background-color: #028bfc;
+} 
+
+#search p {
+    float: right;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0;
+}
+
+.col-1-3 {
+    width: 450px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+}
+
+.grid-pad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+
+tbody {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+tr {
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+td {
+    width: 400px;
+}
+
+#imageContainer {
+    margin: 10px;
+    display: flex;
+}
+
+#imageContainer img {
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
+}
+
+p {
+    font-family: Futura;
+    font-weight: lighter;
+}
+
+
+

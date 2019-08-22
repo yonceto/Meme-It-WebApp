@@ -1,0 +1,47 @@
+body {
+    max-width: 98%;
+}
+
+nav #wrapper {
+    height: 100px;
+    width: auto;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 80px;
+    float: left;
+}
+
+nav h1 {
+    font-family: Futura;
+    font-style: italic;
+}
+
+nav #create,#explore {
+    height: 50px;
+    padding: 10px 15px;
+    font-family: Century Gothic;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #96cffd;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav #create {
+    background-color: #028bfc;
+}
+
+nav #create:hover {
+    background-color:#cccccc;
+}
+
+nav #explore:hover {
+    background-color: #cccccc;
+}

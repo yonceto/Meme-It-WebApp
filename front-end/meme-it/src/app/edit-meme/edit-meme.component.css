@@ -1,0 +1,21 @@
+form {
+    padding: 10px;
+}
+
+button#edit {
+    padding: 10px 15px;
+    font-family: Century Gothic;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 0px;
+    margin: 20px;
+}
+
+button#upload {
+    margin: 10px;
+    padding: 10px 15px;
+    font-family: Century Gothic;
+    font-size: 14px;
+    background-color: #028bfc;
+    border: none;
+}
